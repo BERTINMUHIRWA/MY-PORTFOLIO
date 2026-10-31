@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: "Bertin Creatives — Software Developer & Designer",
   description:
-    "Portfolio of Bertin Muhirwa, a software developer, UI/UX designer and graphic designer building digital products that look considered and work reliably.",
+    "Portfolio of Bertin Creatives, a software developer, UI/UX designer and graphic designer building digital products that look considered and work reliably.",
   openGraph: {
-    title: "Bertin Muhirwa — Software Developer & Designer",
+    title: "Bertin Creatives — Software Developer & Designer",
     description:
       "Full-stack development, interface design and visual branding.",
     type: "website",
