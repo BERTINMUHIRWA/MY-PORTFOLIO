@@ -16,16 +16,16 @@ export default function Footer() {
           ))}
         </nav>
         <div className="socials">
-          <a href={profile.socials.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="icon-btn icon-btn--sm">
-            <Github size={16} />
-          </a>
-          <a href={profile.socials.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="icon-btn icon-btn--sm">
-            <Linkedin size={16} />
-          </a>
-          <a href={profile.socials.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="icon-btn icon-btn--sm">
-            <Instagram size={16} />
-          </a>
-        </div>
+              <a href={profile.socials.github} target="https://www.github.com/BERTINMUHIRWA" rel="noreferrer" aria-label="GitHub" className="icon-btn">
+                <Github />
+              </a>
+              <a href={profile.socials.linkedin} target="https://www.linkedin.com/in/bertin-muhirwa-10bab93ba" rel="noreferrer" aria-label="LinkedIn" className="icon-btn">
+                <Linkedin />
+              </a>
+              <a href={profile.socials.instagram} target="https://www.instagram.com/bertincreatives" rel="noreferrer" aria-label="Instagram" className="icon-btn">
+                <Instagram />
+              </a>
+            </div>
       </div>
     </footer>
   );
