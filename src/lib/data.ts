@@ -22,9 +22,9 @@ export const profile = {
     "Good digital products should look exceptional, feel intuitive and hold up in real use. That's the standard I hold every project to, for individuals and businesses alike.",
   ],
   socials: {
-    github: "https://github.com/",
-    linkedin: "https://www.linkedin.com/",
-    instagram: "https://www.instagram.com/",
+    github: "https://github.com/BERTINMUHIRWA",
+    linkedin: "https://www.linkedin.com/bertin-muhirwa-10bab93ba",
+    instagram: "https://www.instagram.com/bertincreatives",
   },
 };
 
