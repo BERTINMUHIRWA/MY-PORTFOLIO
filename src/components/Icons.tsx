@@ -75,3 +75,15 @@ export const Close = ({ size = 22, className }: IconProps) => (
     <path d="m6 6 12 12M18 6 6 18" />
   </svg>
 );
+
+export const Phone = ({ size = 18, className }: IconProps) => (
+  <svg {...base(size)} className={className}>
+    <path d="M5 4h3.5l1.7 4.2-2.2 1.4a11 11 0 0 0 5.4 5.4l1.4-2.2L19 14.5V18a2 2 0 0 1-2.2 2A14 14 0 0 1 3 6.2 2 2 0 0 1 5 4Z" />
+  </svg>
+);
+
+export const MessageCircle = ({ size = 18, className }: IconProps) => (
+  <svg {...base(size)} className={className}>
+    <path d="M4 20l1.3-4A8 8 0 1 1 8.2 18.8L4 20Z" />
+  </svg>
+);

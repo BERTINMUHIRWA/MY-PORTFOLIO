@@ -42,10 +42,10 @@ export default function Expertise() {
                 <div className="row__action">
                   {active === i ? (
                     <>
-                      <a href="#contact" className="btn btn--solid">
+                      <a href="#contact" data-open-contact className="btn btn--solid">
                         Let&apos;s Talk
                       </a>
-                      <a href="#contact" className="icon-btn icon-btn--solid" aria-label={`Talk about ${item.title}`}>
+                      <a href="#contact" data-open-contact className="icon-btn icon-btn--solid" aria-label={`Talk about ${item.title}`}>
                         <ArrowUpRight />
                       </a>
                     </>

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { nav, profile } from "@/lib/data";
 import { ArrowUpRight, Close, Menu } from "./Icons";
 
-export default function Navbar() {
+export default function Navbar({ base = "" }: { base?: string }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("#home");
@@ -43,7 +43,7 @@ export default function Navbar() {
   return (
     <header className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
       <div className="container navbar__inner">
-        <a href="#home" className="brand" aria-label={`${profile.name} — home`}>
+        <a href={`${base}#home`} className="brand" aria-label={`${profile.name} — home`}>
           <span className="brand__mark">{profile.initial}</span>
           <span className="brand__name">{profile.shortName}</span>
         </a>
@@ -52,8 +52,8 @@ export default function Navbar() {
           {nav.map((item) => (
             <a
               key={item.href}
-              href={item.href}
-              className={active === item.href ? "is-active" : ""}
+              href={`${base}${item.href}`}
+              className={base === "" && active === item.href ? "is-active" : ""}
             >
               {item.label}
             </a>
@@ -61,10 +61,10 @@ export default function Navbar() {
         </nav>
 
         <div className="navbar__cta">
-          <a href="#contact" className="btn btn--ghost">
+          <a href={`${base}#contact`}  data-open-contact className="btn btn--ghost">
             Let&apos;s Talk
           </a>
-          <a href="#contact" className="icon-btn" aria-label="Contact me">
+          <a href={`${base}#contact`} data-open-contact className="icon-btn" aria-label="Contact me">
             <ArrowUpRight />
           </a>
         </div>
@@ -81,11 +81,11 @@ export default function Navbar() {
 
       <div className={`mobile-menu ${open ? "is-open" : ""}`}>
         {nav.map((item) => (
-          <a key={item.href} href={item.href} onClick={() => setOpen(false)}>
+          <a key={item.href} href={`${base}${item.href}`} onClick={() => setOpen(false)}>
             {item.label}
           </a>
         ))}
-        <a href="#contact" className="btn btn--solid" onClick={() => setOpen(false)}>
+        <a href={`${base}#contact`} data-open-contact className="btn btn--solid" onClick={() => setOpen(false)}>
           Let&apos;s Talk
         </a>
       </div>

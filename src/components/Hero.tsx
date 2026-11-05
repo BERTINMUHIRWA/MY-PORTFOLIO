@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="hero__grid" aria-hidden />
       <div className="container hero__inner">
         <div className="hero__copy">
-          <a href="#contact" className="pill-badge">
+          <a href="#contact" data-open-contact className="pill-badge">
             <span className="pill-badge__dot" />
             {profile.availability}
             <span className="pill-badge__action">Let&apos;s talk</span>
@@ -75,7 +75,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <a href="#contact" className="card card--open">
+          <a href="#contact" data-open-contact className="card card--open">
             <span className="card__open-title">UI/UX &amp; Graphic</span>
             <span className="card__open-sub">Design skills</span>
             <span className="btn btn--solid btn--block">

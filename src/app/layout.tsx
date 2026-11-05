@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-
+import ContactModal from "@/components/ContactModal";
 export const metadata: Metadata = {
   // Set NEXT_PUBLIC_SITE_URL to your real domain once deployed (e.g. https://bertin.dev).
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
@@ -25,7 +25,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>{children}<ContactModal /></body>
     </html>
   );
 }

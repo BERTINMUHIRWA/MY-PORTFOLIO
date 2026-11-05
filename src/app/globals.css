@@ -1194,3 +1194,289 @@ textarea {
     padding: 16px;
   }
 }
+/* ───────── Let's Talk popup ───────── */
+html.modal-open {
+  overflow: hidden;
+}
+.cm {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  overflow-y: auto;
+  animation: cm-fade 0.25s ease both;
+}
+.cm__dialog {
+  position: relative;
+  width: min(980px, 100%);
+  margin: auto;
+  padding: clamp(24px, 4vw, 48px);
+  border-radius: 32px;
+  background: #0a0a0b;
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 40px 120px -20px rgba(0, 0, 0, 0.9);
+  animation: cm-rise 0.35s var(--ease) both;
+}
+.cm__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+}
+.cm__title {
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  padding-right: 48px;
+}
+.cm__title strong {
+  font-weight: 700;
+}
+.cm__sub {
+  color: var(--muted);
+  margin: 10px 0 32px;
+}
+.cm__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.cm__card {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(22px, 3vw, 36px);
+  border-radius: 26px;
+  background: #151518;
+  border: 1px solid var(--line);
+  transition: border-color 0.25s, transform 0.3s var(--ease);
+}
+.cm__card:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-3px);
+}
+.cm__icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  background: #f2f2f3;
+  color: #0a0a0a;
+  margin-bottom: 26px;
+}
+.cm__card h3 {
+  font-size: clamp(24px, 2.4vw, 32px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+.cm__card p {
+  color: var(--muted);
+  margin-bottom: 26px;
+}
+.cm__links {
+  display: grid;
+  gap: 10px;
+  margin-top: auto;
+  justify-items: start;
+}
+.cm__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: #f2f2f3;
+  color: #0a0a0a;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  transition: transform 0.25s var(--ease), background 0.25s;
+}
+.cm__link:hover {
+  transform: translateY(-2px);
+  background: #fff;
+}
+.cm__link--soft {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--line-strong);
+  font-weight: 500;
+}
+.cm__link--soft:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+@keyframes cm-fade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes cm-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+}
+@media (max-width: 760px) {
+  .cm {
+    align-items: start;
+    padding: 12px;
+  }
+  .cm__cards {
+    grid-template-columns: 1fr;
+  }
+  .cm__dialog {
+    border-radius: 26px;
+  }
+}
+/* ───────── Let's Talk popup ───────── */
+html.modal-open {
+  overflow: hidden;
+}
+.cm {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  overflow-y: auto;
+  animation: cm-fade 0.25s ease both;
+}
+.cm__dialog {
+  position: relative;
+  width: min(980px, 100%);
+  margin: auto;
+  padding: clamp(24px, 4vw, 48px);
+  border-radius: 32px;
+  background: #0a0a0b;
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 40px 120px -20px rgba(0, 0, 0, 0.9);
+  animation: cm-rise 0.35s var(--ease) both;
+}
+.cm__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+}
+.cm__title {
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  padding-right: 48px;
+}
+.cm__title strong {
+  font-weight: 700;
+}
+.cm__sub {
+  color: var(--muted);
+  margin: 10px 0 32px;
+}
+.cm__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.cm__card {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(22px, 3vw, 36px);
+  border-radius: 26px;
+  background: #151518;
+  border: 1px solid var(--line);
+  transition: border-color 0.25s, transform 0.3s var(--ease);
+}
+.cm__card:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-3px);
+}
+.cm__icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  background: #f2f2f3;
+  color: #0a0a0a;
+  margin-bottom: 26px;
+}
+.cm__card h3 {
+  font-size: clamp(24px, 2.4vw, 32px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+.cm__card p {
+  color: var(--muted);
+  margin-bottom: 26px;
+}
+.cm__links {
+  display: grid;
+  gap: 10px;
+  margin-top: auto;
+  justify-items: start;
+}
+.cm__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: #f2f2f3;
+  color: #0a0a0a;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  transition: transform 0.25s var(--ease), background 0.25s;
+}
+.cm__link:hover {
+  transform: translateY(-2px);
+  background: #fff;
+}
+.cm__link--soft {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--line-strong);
+  font-weight: 500;
+}
+.cm__link--soft:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+@keyframes cm-fade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes cm-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+}
+@media (max-width: 760px) {
+  .cm {
+    align-items: start;
+    padding: 12px;
+  }
+  .cm__cards {
+    grid-template-columns: 1fr;
+  }
+  .cm__dialog {
+    border-radius: 26px;
+  }
+}

@@ -133,5 +133,8 @@ export const experiences = [
     company: "RP-IPRC Tumba College",
     description:
       "Studying Information Technology while building real-world web applications and design projects.",
+      phoneDisplay: "+250 793 852 958",
+phoneIntl: "+250793852958",
+whatsappNumber: "250793852958",
   },
 ];
